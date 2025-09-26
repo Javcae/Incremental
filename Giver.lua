@@ -22,7 +22,7 @@ function Giver.new(giver: {Part : BasePart, Stat : TypeLib.Stat, GivenAmount : n
 
 	-- Properties
 	self.Part = giver.Part
-	self.Amount = giver.Amount
+	self.Amount = giver.GivenAmount
 	self.Stat = giver.Stat  -- Note: This is a "definition" (Name, Value?)
 	self.Connection = nil
 
