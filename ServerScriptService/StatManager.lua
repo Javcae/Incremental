@@ -5,12 +5,11 @@ local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 --// Modules
-local Utils = require(ReplicatedStorage.Modules.Utilities.Utils)
+local Utils = require(ReplicatedStorage.Modules.Utilities.General)
 
 -- Testing rn
 local baseStats = {
-	["Coins"] = 0,
-	["Gems"] = 0,
+	
 }
 
 Players.PlayerAdded:Connect(function(plr)
