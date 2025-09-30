@@ -23,6 +23,7 @@ function Generator.new(generator: {Part : BasePart, Player : Player})
 	self.Amount = self.Part:GetAttribute("Amount")
 	self.Cooldown = self.Part:GetAttribute("Cooldown")
 	self.TurnedOn = generator.Part:GetAttribute("TurnedOn") or false
+	self.TimeLeft = 0 -- Time left on cooldown when generator is shut off
 	
 	-- Stat Definition
 	self.StatDef = {Name = self.Part:GetAttribute("StatName")}
@@ -31,9 +32,6 @@ function Generator.new(generator: {Part : BasePart, Player : Player})
 	-- Owner
 	self.Owner = generator.Player
 	self.Connection = nil
-	
-	-- Private Properties
-	self.TimeLeft = 0 -- Time left on cooldown when generator is shut off
 
 	print("Creating generator for stat:", self.StatDef.Name)
 
